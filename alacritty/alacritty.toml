@@ -1,0 +1,39 @@
+import = [
+  #"~/.config/alacritty/themes/ubuntu.toml"
+  "~/.config/alacritty/themes/catppuccin-mocha.toml"
+]
+
+[window]
+
+opacity = 1
+
+padding.x = 5
+padding.y = 5
+
+#decorations = "None"
+decorations_theme_variant = "Dark"
+
+[font]
+
+normal.family = "MesloLGS NF"
+bold.family = "MesloLGS NF"
+italic.family = "MesloLGS NF"
+bold_italic.family = "MesloLGS NF"
+normal.style = "Regular"
+
+size = 18.0
+
+#[shell]
+
+#program = "/opt/homebrew/bin/tmux"
+#args = ["new-session", "-A", "-s", "main"]
+
+[keyboard]
+
+bindings = [
+  { key = "T", mods = "Command", action = "ReceiveChar" },
+  { key = "K", mods = "Command", action = "ClearHistory" }
+]
+
+[scrolling]
+history = 50000
