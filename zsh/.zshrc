@@ -20,7 +20,7 @@ setopt PROMPT_SUBST
 add-zsh-hook precmd vcs_info
 PROMPT='%1~ %F{red}${vcs_info_msg_0_}%f %# '
 zstyle ':vcs_info:*' check-for-changes true
-zstyle ':vcs_info:*' unstagedstr '*'
+zstyle ':vcs_info:*' unstagedstr '%F{red}*%f'
 zstyle ':vcs_info:*' stagedstr '+'
 
 zstyle ':vcs_info:git:*' formats ' 󰘬:%b%u%c'
