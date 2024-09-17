@@ -2,6 +2,8 @@ _G.goyo = {}
 
 -- Define the GoyoEnter function
 function goyo.enter()
+  vim.cmd 'colorscheme eink'
+  vim.o.background = 'light'
   vim.opt.showmode = false
   vim.opt.scrolloff = 50
   vim.cmd("Limelight")
@@ -15,6 +17,7 @@ end
 
 -- Define the GoyoLeave function
 function goyo.leave()
+  vim.o.background = 'dark'
   vim.opt.showmode = true
   vim.opt.scrolloff = 5
   vim.cmd("Limelight!")
