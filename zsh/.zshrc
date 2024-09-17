@@ -18,13 +18,23 @@ bindkey ";3D" backward-word
 autoload -Uz vcs_info add-zsh-hook
 setopt PROMPT_SUBST
 add-zsh-hook precmd vcs_info
-PROMPT='%1~ %F{red}${vcs_info_msg_0_}%f %# '
 zstyle ':vcs_info:*' check-for-changes true
+
 zstyle ':vcs_info:*' unstagedstr '%F{red}*%f'
 zstyle ':vcs_info:*' stagedstr '+'
 
 zstyle ':vcs_info:git:*' formats ' 󰘬:%b%u%c'
 zstyle ':vcs_info:git:*' actionformats ' 󰘬:%b|%a%u%c'
+
 PS1='%B%F{red}[%F{yellow}%n%F{green}${vcs_info_msg_0_} %5F%1~%F{red}]›%f%b '
 
+# Hook for showing untracked files
++vi-git-untracked() {
+  if [[ $(git rev-parse --is-inside-work-tree 2> /dev/null) == 'true' ]] && \
+  [ -n "$(git status --porcelain 2> /dev/null)" ]; then
+    hook_com[unstaged]+='%F{red}?%f'  # Add '?' for untracked files
+  fi
+}
 
+# Git status settings
+zstyle ':vcs_info:git*+set-message:*' hooks git-untracked
