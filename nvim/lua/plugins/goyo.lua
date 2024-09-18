@@ -5,7 +5,9 @@ function goyo.enter()
   vim.cmd 'colorscheme eink'
   vim.o.background = 'light'
   vim.opt.showmode = false
-  vim.opt.scrolloff = 50
+  vim.opt.scrolloff = 999
+  vim.cmd('setlocal spell spelllang=en_us ')
+  vim.o.smoothscroll = true
   vim.cmd("Limelight")
   if require('lualine') then
     require('lualine').hide({
@@ -17,9 +19,11 @@ end
 
 -- Define the GoyoLeave function
 function goyo.leave()
+  vim.cmd('setlocal spell!')
   vim.o.background = 'dark'
   vim.opt.showmode = true
   vim.opt.scrolloff = 5
+  vim.o.smoothscroll = false
   vim.cmd("Limelight!")
   if require('lualine') then
     require('lualine').hide({
