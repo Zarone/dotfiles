@@ -7,6 +7,7 @@ export PATH="/Applications/CMake.app/Contents/bin":"$PATH"
 export PATH="/Users/zacharya/.local/bin:$PATH"
 export PATH=$PATH:$ANDROID_HOME/emulator
 export PATH=$PATH:$ANDROID_HOME/platform-tools
+export PATH="/Library/TeX/texbin:$PATH"
 
 export TERM=xterm-256color
 
