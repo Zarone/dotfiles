@@ -39,3 +39,9 @@ PS1='%B%F{red}[%F{yellow}%n%F{green}${vcs_info_msg_0_} %5F%1~%F{red}]›%f%b '
 
 # Git status settings
 zstyle ':vcs_info:git*+set-message:*' hooks git-untracked
+
+
+# Binds C-f to ThePrimeagen tmux fuzzy finder
+chmod +x ~/dotfiles/zsh/tmux_launcher.sh
+bindkey -s '^f' '~/dotfiles/zsh/tmux_launcher.sh\n'
+
