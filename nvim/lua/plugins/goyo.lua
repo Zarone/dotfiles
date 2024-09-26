@@ -5,7 +5,7 @@ function goyo.enter()
   vim.cmd 'colorscheme eink'
   vim.o.background = 'light'
   vim.opt.showmode = false
-  vim.opt.scrolloff = 999
+  vim.opt.scrolloff = 1
   vim.cmd('setlocal spell spelllang=en_us ')
   vim.o.smoothscroll = true
   vim.cmd("Limelight")
