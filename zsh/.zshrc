@@ -11,7 +11,7 @@ export PATH="/Library/TeX/texbin:$PATH"
 
 export TERM=xterm-256color
 
-# Binds option left-arrow and option right-arrow to jump words
+## Binds option left-arrow and option right-arrow to jump words
 bindkey ";3C" forward-word
 bindkey ";3D" backward-word
 

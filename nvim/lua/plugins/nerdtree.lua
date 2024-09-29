@@ -13,5 +13,5 @@ local opts = {
 }
 
 --- control b to open nerd tree
-vim.keymap.set('n', '∫', ':NERDTreeToggle<CR>', opts)
+vim.keymap.set('n', '<A-b>', ':NERDTreeToggle<CR>', opts)
 

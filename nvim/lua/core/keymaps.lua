@@ -4,8 +4,12 @@ local opts = {
     silent = true,       -- do not show message
 }
 
--- "kj" to go into normal mode
-vim.keymap.set('i', 'kj', '<ESC>', opts)
+-- I used to use this keybinding,
+-- but I want to get used to a default
+-- keybinding so that I can work without 
+-- my settings
+---- "kj" to go into normal mode
+--vim.keymap.set('i', 'kj', '<ESC>', opts)
 
 -- ">" to expand panel
 vim.keymap.set('n', '>', ':vertical res +5<CR>', opts)

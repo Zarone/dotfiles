@@ -5,6 +5,8 @@ import = [
 
 [window]
 
+option_as_alt = "Both"
+
 opacity = 1
 
 padding.x = 5
@@ -24,7 +26,6 @@ normal.style = "Regular"
 size = 18.0
 
 [shell]
-
 program = "/bin/zsh"
 
 #program = "/opt/homebrew/bin/tmux"
