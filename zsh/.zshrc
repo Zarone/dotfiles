@@ -9,6 +9,8 @@ export PATH=$PATH:$ANDROID_HOME/emulator
 export PATH=$PATH:$ANDROID_HOME/platform-tools
 export PATH="/Library/TeX/texbin:$PATH"
 
+export PATH="$PATH:/Applications/Docker.app/Contents/Resources/bin/"
+
 export TERM=xterm-256color
 
 ## Binds option left-arrow and option right-arrow to jump words
