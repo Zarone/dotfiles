@@ -1,6 +1,6 @@
 vim.o.background = 'dark'
 --vim.cmd 'colorscheme tokyonight'
-vim.cmd 'colorscheme kanagawa'
+vim.cmd 'colorscheme tokyonight'
 
 require("tokyonight").setup({
   -- your configuration comes here
