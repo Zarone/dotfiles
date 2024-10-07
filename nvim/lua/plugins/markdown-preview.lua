@@ -88,7 +88,7 @@ vim.g.mkdp_port = ''
 
 -- preview page title
 -- ${name} will be replace with the file name
-vim.g.mkdp_page_title = '「${name}」'
+vim.g.mkdp_page_title = '${name}'
 
 -- recognized filetypes
 -- these filetypes will have MarkdownPreview... commands

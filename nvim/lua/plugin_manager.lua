@@ -73,13 +73,9 @@ return packer.startup(function(use)
 
   -- Debugger
   use 'mfussenegger/nvim-dap'
-  use { "rcarriga/nvim-dap-ui", requires = {"mfussenegger/nvim-dap"} }
+  use { "rcarriga/nvim-dap-ui", requires = {"mfussenegger/nvim-dap", "nvim-neotest/nvim-nio"} }
   use 'mfussenegger/nvim-dap-python'
   use 'nvim-telescope/telescope-dap.nvim'
-
-  -- Compact view for writing non-code
-  use "junegunn/goyo.vim"
-  use "junegunn/limelight.vim"
 
   -- Adds TMUX compatability
   use 'christoomey/vim-tmux-navigator'

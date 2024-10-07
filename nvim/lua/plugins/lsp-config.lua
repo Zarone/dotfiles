@@ -44,7 +44,7 @@ require("lspconfig").rust_analyzer.setup{
 }
 
 -- TypeScript
-require("lspconfig").tsserver.setup {
+require("lspconfig")["ts_ls"].setup {
   on_attach = on_attach,
   filetypes = { "javascript", "typescript", "typescriptreact", "typescript.tsx" },
   cmd = { "typescript-language-server", "--stdio" }

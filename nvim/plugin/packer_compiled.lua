@@ -89,11 +89,6 @@ _G.packer_plugins = {
     path = "/Users/zacharya/.local/share/nvim/site/pack/packer/start/cmp_luasnip",
     url = "https://github.com/saadparwaiz1/cmp_luasnip"
   },
-  ["goyo.vim"] = {
-    loaded = true,
-    path = "/Users/zacharya/.local/share/nvim/site/pack/packer/start/goyo.vim",
-    url = "https://github.com/junegunn/goyo.vim"
-  },
   gruvbox = {
     loaded = true,
     path = "/Users/zacharya/.local/share/nvim/site/pack/packer/start/gruvbox",
@@ -103,11 +98,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/zacharya/.local/share/nvim/site/pack/packer/start/kanagawa.nvim",
     url = "https://github.com/rebelot/kanagawa.nvim"
-  },
-  ["limelight.vim"] = {
-    loaded = true,
-    path = "/Users/zacharya/.local/share/nvim/site/pack/packer/start/limelight.vim",
-    url = "https://github.com/junegunn/limelight.vim"
   },
   ["lualine.nvim"] = {
     loaded = true,
@@ -165,6 +155,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/zacharya/.local/share/nvim/site/pack/packer/start/nvim-lspconfig",
     url = "https://github.com/neovim/nvim-lspconfig"
+  },
+  ["nvim-nio"] = {
+    loaded = true,
+    path = "/Users/zacharya/.local/share/nvim/site/pack/packer/start/nvim-nio",
+    url = "https://github.com/nvim-neotest/nvim-nio"
   },
   ["nvim-treesitter"] = {
     loaded = true,
