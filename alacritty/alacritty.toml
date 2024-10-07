@@ -9,8 +9,8 @@ option_as_alt = "Both"
 
 opacity = 1
 
-padding.x = 5
-padding.y = 5
+padding.x = 0
+padding.y = 0
 
 #decorations = "None"
 decorations_theme_variant = "Dark"
@@ -23,7 +23,7 @@ bold.family = "MesloLGS NF"
 bold_italic.family = "MesloLGS NF"
 normal.style = "Regular"
 
-size = 18.0
+size = 15.0
 
 [shell]
 program = "/bin/zsh"
