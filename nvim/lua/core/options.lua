@@ -7,8 +7,11 @@ vim.opt.shiftwidth = 2
 -- use space when tab inserted
 vim.opt.expandtab = true
 
--- print line numbers on side
-vim.opt.number = true
+-- don't print line numbers on side
+-- right now I feel like they just get in the way.
+-- I mean I just don't think it's necessary.
+-- I might change my mind later.
+vim.opt.number = false
 
 -- I don't like relative line numbers
 vim.opt.relativenumber = false
@@ -34,3 +37,6 @@ vim.opt.title = true
 
 -- turns off sounds
 vim.opt.belloff = 'all'
+
+-- makes scrolling with wrapped text nicer
+vim.o.smoothscroll = true
