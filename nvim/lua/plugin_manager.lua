@@ -42,14 +42,11 @@ return packer.startup(function(use)
 
   -- Visual changes
   use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
-  use {
-    'nvim-lualine/lualine.nvim',
-    requires = { 'nvim-tree/nvim-web-devicons', opt = true }
-  }
   use('ryanoasis/vim-devicons')
 
   -- Easily comment code
   use('preservim/nerdcommenter')
+
   -- LSP Settings
   use {
     "williamboman/mason.nvim",
