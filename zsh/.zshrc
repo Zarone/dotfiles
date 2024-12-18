@@ -17,19 +17,17 @@ export TERM=xterm-256color
 bindkey ";3C" forward-word
 bindkey ";3D" backward-word
 
-# PS1 Settings
+### Verbose PS1 Settings
+###
+
 autoload -Uz vcs_info add-zsh-hook
 setopt PROMPT_SUBST
 add-zsh-hook precmd vcs_info
 zstyle ':vcs_info:*' check-for-changes true
-
 zstyle ':vcs_info:*' unstagedstr '%F{red}*%f'
 zstyle ':vcs_info:*' stagedstr '+'
-
 zstyle ':vcs_info:git:*' formats ' 󰘬:%b%u%c'
 zstyle ':vcs_info:git:*' actionformats ' 󰘬:%b|%a%u%c'
-
-PS1='%B%F{red}[%F{yellow}%n%F{green}${vcs_info_msg_0_} %5F%1~%F{red}]›%f%b '
 
 # Hook for showing untracked files
 +vi-git-untracked() {
@@ -42,6 +40,10 @@ PS1='%B%F{red}[%F{yellow}%n%F{green}${vcs_info_msg_0_} %5F%1~%F{red}]›%f%b '
 # Git status settings
 zstyle ':vcs_info:git*+set-message:*' hooks git-untracked
 
+PS1='%B%F{red}[%F{yellow}%n%F{green}${vcs_info_msg_0_} %5F%1~%F{red}]›%f%b '
+
+###
+### 
 
 # Binds C-f to ThePrimeagen tmux fuzzy finder
 chmod +x ~/dotfiles/zsh/tmux_launcher.sh

@@ -40,3 +40,6 @@ vim.opt.belloff = 'all'
 
 -- makes scrolling with wrapped text nicer
 vim.o.smoothscroll = true
+
+-- set nowrap
+vim.opt.wrap = false

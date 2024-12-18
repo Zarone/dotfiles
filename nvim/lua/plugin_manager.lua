@@ -21,6 +21,7 @@ return packer.startup(function(use)
   -- Colorschemes (256 color)
   use('morhetz/gruvbox')
   use('sainnhe/sonokai')
+  use('yorickpeterse/nvim-grey')
 
   -- Colorschemes (True color)
   use ('folke/tokyonight.nvim')
