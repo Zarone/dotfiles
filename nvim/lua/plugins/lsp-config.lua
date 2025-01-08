@@ -10,6 +10,29 @@ local on_attach = function(_, _)
   vim.keymap.set("n", "<leader>r", vim.lsp.buf.rename, {})
 end
 
+
+-- setup C header files with cmake
+local function setup_clangd()
+  local project_root = vim.fn.getcwd()
+
+  if vim.fn.filereadable(project_root .. "/CMakeLists.txt") == 0 then
+    print("No CMake file found")
+    return
+  end
+
+  if vim.fn.filereadable(project_root .. "/build/compile_commands.json") == 0 then
+    print("Run \"cmake -DCMAKE_EXPORT_COMPILE_COMMANDS=ON -S . -B build\" and reload")
+  end
+end
+
+local on_attach_setup_clang = function(_, _)
+  vim.keymap.set("n", "gd", vim.lsp.buf.definition, {})
+  vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
+  vim.keymap.set("n", "<leader>e", vim.diagnostic.open_float, {})
+  vim.keymap.set("n", "<leader>r", vim.lsp.buf.rename, {})
+  setup_clangd()
+end
+
 local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
 -- Python
@@ -56,7 +79,6 @@ require("lspconfig").cssls.setup {
   capabilities = capabilities
 }
 
-
 -- Tailwind
 require("lspconfig").tailwindcss.setup {
   on_attach = on_attach,
@@ -77,8 +99,9 @@ require("lspconfig").jdtls.setup{
 
 -- C
 require("lspconfig").clangd.setup{
-  on_attach = on_attach,
-  capabilities = capabilities
+  on_attach = on_attach_setup_clang,
+  capabilities = capabilities,
+  cmd = { "clangd", "--compile-commands-dir=build" },
 }
 
 -- ESLint
@@ -86,9 +109,6 @@ require("lspconfig").eslint.setup{
   on_attach = on_attach,
   capabilities = capabilities
 }
-
-
-
 
 -- Format Code
 vim.cmd('command! Format lua vim.lsp.buf.format()')
