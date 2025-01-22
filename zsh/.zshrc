@@ -1,6 +1,7 @@
 export JDK_HOME="/usr/libexec/java_home"
 export ANDROID_HOME="~/Library/Android/sdk"
 export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk-21.jdk/Contents/Home"
+alias python="python3"
 
 export PATH="/opt/homebrew/bin:$PATH"
 export PATH="/Applications/CMake.app/Contents/bin":"$PATH"
@@ -12,6 +13,7 @@ export PATH="/Library/TeX/texbin:$PATH"
 export PATH="$PATH:/Applications/Docker.app/Contents/Resources/bin/"
 
 export TERM=xterm-256color
+export COLORTERM=truecolor
 
 ## Binds option left-arrow and option right-arrow to jump words
 bindkey ";3C" forward-word

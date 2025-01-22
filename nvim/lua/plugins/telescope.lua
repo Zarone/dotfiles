@@ -10,7 +10,7 @@ require("telescope").setup({
     }
   },
   defaults = {
-    file_ignore_patterns = { "node_modules" },
+    file_ignore_patterns = { "node_modules", "build" },
     mappings = {
       n = {
         ["o"] = actions.select_default

@@ -4,7 +4,10 @@ local opts = {
     silent = true,       -- do not show message
 }
 
-vim.keymap.set('n', '<leader>ll', ':MarkdownPreview<CR>', opts)
+-- for some reason, if I don't do this it triggers on CMakeLists.txt
+if not vim.fn.filereadable('CMakeLists.txt') then
+  vim.keymap.set('n', '<leader>ll', ':MarkdownPreview<CR>', opts)
+end
 
 vim.g.markdown_recommended_style = 0
 

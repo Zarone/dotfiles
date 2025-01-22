@@ -19,13 +19,13 @@ return packer.startup(function(use)
   use('wbthomason/packer.nvim')
 
   -- Colorschemes (256 color)
-  use('morhetz/gruvbox')
-  use('sainnhe/sonokai')
-  use('yorickpeterse/nvim-grey')
+  --use('morhetz/gruvbox')
+  --use('sainnhe/sonokai')
+  --use('yorickpeterse/nvim-grey')
 
   -- Colorschemes (True color)
   use ('folke/tokyonight.nvim')
-  use "rebelot/kanagawa.nvim"
+  use('rose-pine/neovim')
 
   -- File exploreer
   use('preservim/nerdtree')

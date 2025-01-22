@@ -12,12 +12,13 @@ cmp.setup({
 
     ["<Tab>"] = cmp.mapping(function(fallback)
       local luasnip = require("luasnip")
+      print("HERE")
       if cmp.visible() then
         cmp.select_next_item()
       elseif luasnip.expand_or_jumpable() then
         luasnip.expand_or_jump()
-      elseif has_words_before() then
-        cmp.complete()
+      --elseif has_words_before() then
+        --cmp.complete()
       else
         fallback()
       end

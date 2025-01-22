@@ -7,14 +7,9 @@ vim.opt.shiftwidth = 2
 -- use space when tab inserted
 vim.opt.expandtab = true
 
--- don't print line numbers on side
--- right now I feel like they just get in the way.
--- I mean I just don't think it's necessary.
--- I might change my mind later.
-vim.opt.number = false
+vim.opt.number = true
 
--- I don't like relative line numbers
-vim.opt.relativenumber = false
+vim.opt.relativenumber = true
 
 -- can delete any of these characters in insert mode
 vim.opt.backspace = 'indent,eol,start'

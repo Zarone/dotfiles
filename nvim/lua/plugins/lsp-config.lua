@@ -26,10 +26,7 @@ local function setup_clangd()
 end
 
 local on_attach_setup_clang = function(_, _)
-  vim.keymap.set("n", "gd", vim.lsp.buf.definition, {})
-  vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
-  vim.keymap.set("n", "<leader>e", vim.diagnostic.open_float, {})
-  vim.keymap.set("n", "<leader>r", vim.lsp.buf.rename, {})
+  on_attach()
   setup_clangd()
 end
 
