@@ -40,3 +40,6 @@ bindings = [
 
 [scrolling]
 history = 50000
+
+[env]
+term = "xterm-256color"
