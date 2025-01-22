@@ -1,6 +1,11 @@
 require("telescope").load_extension("dap")
 local dap, dapui = require("dap"), require("dapui")
 require('dap-python').setup('/opt/homebrew/bin/python')
+
+require("nvim-dap-virtual-text").setup({
+  commented = true,
+})
+
 dapui.setup()
 dap.listeners.after.event_initialized["dapui_config"] = function()
   dapui.open()
@@ -74,6 +79,34 @@ vim.keymap.set('n', '<F12>', dap.step_out)
 vim.keymap.set('n', '<leader>b', dap.toggle_breakpoint)
 vim.keymap.set('n', '<leader>d', ":Telescope dap commands<CR>")
 
+local install_root_dir = vim.fn.stdpath("data") .. "/mason"
+local extension_path = install_root_dir .. "/packages/codelldb/extension/"
+local codelldb_path = extension_path .. "adapter/codelldb"
+
+dap.adapters.codelldb = {
+  type = "server",
+  port = "${port}",
+  executable = {
+    command = codelldb_path,
+    args = { "--port", "${port}" },
+  },
+}
+
+dap.configurations.cpp = {
+  {
+    name = "Launch file",
+    type = "codelldb",
+    request = "launch",
+    program = function()
+      return vim.fn.input("Path to executable: ", vim.fn.getcwd() .. "/", "file")
+    end,
+    cwd = "${workspaceFolder}",
+    stopOnEntry = true,
+  },
+}
+
+dap.configurations.c = dap.configurations.cpp
+
 dap.configurations.python = {
   {
     type = "python",
@@ -81,11 +114,5 @@ dap.configurations.python = {
     request = "launch",
     program = "./main.py",
   },
-  {
-    type = "python",
-    name = "debug test",
-    request = "launch",
-    program = "./test.py",
-  }
 }
 

@@ -71,8 +71,11 @@ return packer.startup(function(use)
 
   -- Debugger
   use 'mfussenegger/nvim-dap'
+  use {'jay-babu/mason-nvim-dap.nvim', requires={"mfussenegger/nvim-dap", "williamboman/mason.nvim"} }
   use { "rcarriga/nvim-dap-ui", requires = {"mfussenegger/nvim-dap", "nvim-neotest/nvim-nio"} }
   use 'mfussenegger/nvim-dap-python'
+  use "julianolf/nvim-dap-lldb"
+  use "theHamsta/nvim-dap-virtual-text"
   use 'nvim-telescope/telescope-dap.nvim'
 
   -- Adds TMUX compatability

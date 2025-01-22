@@ -11,6 +11,7 @@ export PATH=$PATH:$ANDROID_HOME/platform-tools
 export PATH="/Library/TeX/texbin:$PATH"
 
 export PATH="$PATH:/Applications/Docker.app/Contents/Resources/bin/"
+alias codelldb="while sleep 1; do codelldb --port 13000;"
 
 ## Binds option left-arrow and option right-arrow to jump words
 bindkey ";3C" forward-word
