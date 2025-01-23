@@ -7,9 +7,9 @@ vim.opt.shiftwidth = 2
 -- use space when tab inserted
 vim.opt.expandtab = true
 
-vim.opt.number = true
-
-vim.opt.relativenumber = true
+vim.opt.number = false
+--vim.opt.number = true
+--vim.opt.relativenumber = true
 
 -- can delete any of these characters in insert mode
 vim.opt.backspace = 'indent,eol,start'
