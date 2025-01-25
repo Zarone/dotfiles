@@ -89,6 +89,11 @@ _G.packer_plugins = {
     path = "/Users/zacharya/.local/share/nvim/site/pack/packer/start/cmp_luasnip",
     url = "https://github.com/saadparwaiz1/cmp_luasnip"
   },
+  harpoon = {
+    loaded = true,
+    path = "/Users/zacharya/.local/share/nvim/site/pack/packer/start/harpoon",
+    url = "https://github.com/ThePrimeagen/harpoon"
+  },
   ["markdown-preview.nvim"] = {
     loaded = false,
     needs_bufread = false,
@@ -111,6 +116,16 @@ _G.packer_plugins = {
     path = "/Users/zacharya/.local/share/nvim/site/pack/packer/start/mason.nvim",
     url = "https://github.com/williamboman/mason.nvim"
   },
+  ["mini.files"] = {
+    loaded = true,
+    path = "/Users/zacharya/.local/share/nvim/site/pack/packer/start/mini.files",
+    url = "https://github.com/echasnovski/mini.files"
+  },
+  ["mini.icons"] = {
+    loaded = true,
+    path = "/Users/zacharya/.local/share/nvim/site/pack/packer/start/mini.icons",
+    url = "https://github.com/echasnovski/mini.icons"
+  },
   neovim = {
     loaded = true,
     path = "/Users/zacharya/.local/share/nvim/site/pack/packer/start/neovim",
@@ -120,11 +135,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/zacharya/.local/share/nvim/site/pack/packer/start/nerdcommenter",
     url = "https://github.com/preservim/nerdcommenter"
-  },
-  nerdtree = {
-    loaded = true,
-    path = "/Users/zacharya/.local/share/nvim/site/pack/packer/start/nerdtree",
-    url = "https://github.com/preservim/nerdtree"
   },
   ["nvim-cmp"] = {
     loaded = true,
@@ -195,11 +205,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/zacharya/.local/share/nvim/site/pack/packer/start/tokyonight.nvim",
     url = "https://github.com/folke/tokyonight.nvim"
-  },
-  ["vim-devicons"] = {
-    loaded = true,
-    path = "/Users/zacharya/.local/share/nvim/site/pack/packer/start/vim-devicons",
-    url = "https://github.com/ryanoasis/vim-devicons"
   },
   ["vim-tmux-navigator"] = {
     loaded = true,

@@ -28,7 +28,13 @@ return packer.startup(function(use)
   use('rose-pine/neovim')
 
   -- File exploreer
-  use('preservim/nerdtree')
+  --use('preservim/nerdtree')
+  use("stevearc/oil.nvim")
+  use {
+    "ThePrimeagen/harpoon",
+    branch = "harpoon2",
+    requires = { {"nvim-lua/plenary.nvim"} }
+  }
 
   -- Latex compiler
   use('lervag/vimtex')
@@ -43,7 +49,7 @@ return packer.startup(function(use)
 
   -- Visual changes
   use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
-  use('ryanoasis/vim-devicons')
+  use 'echasnovski/mini.icons'
 
   -- Easily comment code
   use('preservim/nerdcommenter')

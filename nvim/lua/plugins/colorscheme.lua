@@ -1,28 +1,30 @@
+vim.o.background = 'dark'
+
 require('rose-pine').setup({
-  disable_background = true,
+  --disable_background = true,
   styles = {
     italic = false,
   },
 })
-
-vim.api.nvim_set_hl(0, "Normal", {ctermbg='none'})
-vim.api.nvim_set_hl(0, "NormalFloat", {ctermbg='none'})
 vim.cmd.colorscheme("rose-pine-moon")
 
+
+
 --vim.cmd 'colorscheme tokyonight'
+
 --require("tokyonight").setup({
   ---- your configuration comes here
   ---- or leave it empty to use the default settings
   --style = "storm", -- The theme comes in three styles, `storm`, `moon`, a darker variant `night` and `day`
   --light_style = "day", -- The theme is used when the background is set to light
-  --transparent = false, -- Enable this to disable setting the background color
+  --transparent = true, -- Enable this to disable setting the background color
   --terminal_colors = true, -- Configure the colors used when opening a `:terminal` in [Neovim](https://github.com/neovim/neovim)
   --styles = {
     ---- Style to be applied to different syntax groups
     ---- Value is any valid attr-list value for `:help nvim_set_hl`
     --comments = { italic = true },
     --keywords = { italic = true },
-    --functions = {},[
+    --functions = {},
     --variables = {},
     ---- Background styles. Can be "dark", "transparent" or "normal"
     --sidebars = "dark", -- style for sidebars, see below
@@ -44,4 +46,23 @@ vim.cmd.colorscheme("rose-pine-moon")
   -----@param highlights Highlights
   -----@param colors ColorScheme
   --on_highlights = function(highlights, colors) end,
+--})
+
+ ---- Optional, you don't have to run setup.
+--require("transparent").setup({
+  ---- table: default groups
+  --groups = {
+    --'Normal', 'NormalNC', 'Comment', 'Constant', 'Special', 'Identifier',
+    --'Statement', 'PreProc', 'Type', 'Underlined', 'Todo', 'String', 'Function',
+    --'Conditional', 'Repeat', 'Operator', 'Structure', 'LineNr', 'NonText',
+    --'SignColumn', 'CursorLine', 'CursorLineNr', 'StatusLine', 'StatusLineNC',
+    --'EndOfBuffer',
+  --},
+  ---- table: additional groups that should be cleared
+  --extra_groups = {},
+  ---- table: groups you don't want to clear
+  --exclude_groups = {},
+  ---- function: code to be executed after highlight groups are cleared
+  ---- Also the user event "TransparentClear" will be triggered
+  --on_clear = function() end,
 --})
