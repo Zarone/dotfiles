@@ -17,6 +17,7 @@ end
 
 return packer.startup(function(use)
   use('wbthomason/packer.nvim')
+  use 'nvim-lua/plenary.nvim'
 
   -- Colorschemes (256 color)
   --use('morhetz/gruvbox')
@@ -30,11 +31,6 @@ return packer.startup(function(use)
   -- File exploreer
   --use('preservim/nerdtree')
   use("stevearc/oil.nvim")
-  use {
-    "ThePrimeagen/harpoon",
-    branch = "harpoon2",
-    requires = { {"nvim-lua/plenary.nvim"} }
-  }
 
   -- Latex compiler
   use('lervag/vimtex')
@@ -50,6 +46,7 @@ return packer.startup(function(use)
   -- Visual changes
   use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
   use 'echasnovski/mini.icons'
+  use 'nvim-tree/nvim-web-devicons'
 
   -- Easily comment code
   use('preservim/nerdcommenter')

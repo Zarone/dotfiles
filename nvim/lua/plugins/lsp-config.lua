@@ -107,6 +107,12 @@ require("lspconfig").eslint.setup{
   capabilities = capabilities
 }
 
+-- Latex
+require("lspconfig").texlab.setup{
+  on_attach = on_attach,
+  capabilities = capabilities
+}
+
 -- Format Code
 vim.cmd('command! Format lua vim.lsp.buf.format()')
 

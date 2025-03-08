@@ -12,7 +12,6 @@ cmp.setup({
 
     ["<Tab>"] = cmp.mapping(function(fallback)
       local luasnip = require("luasnip")
-      print("HERE")
       if cmp.visible() then
         cmp.select_next_item()
       elseif luasnip.expand_or_jumpable() then
@@ -23,7 +22,8 @@ cmp.setup({
         fallback()
       end
     end, { "i", "s" }),
-
+    ['<C-E>'] = cmp.config.disable,
+    ['<C-S-E>'] = cmp.mapping.abort(),
     ["<S-Tab>"] = cmp.mapping(function(fallback)
       local luasnip = require("luasnip")
       if cmp.visible() then

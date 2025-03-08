@@ -1,7 +1,7 @@
 vim.o.background = 'dark'
 
 require('rose-pine').setup({
-  --disable_background = true,
+  disable_background = true,
   styles = {
     italic = false,
   },

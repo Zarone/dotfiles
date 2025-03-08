@@ -23,13 +23,9 @@ vim.keymap.set('n', 'k', 'gk', opts)
 vim.keymap.set('v', 'j', 'gj', opts)
 vim.keymap.set('v', 'k', 'gk', opts)
 
--- I liked this map, but now I 
--- just use a similar setup for
--- harpoon plugin
-
 -- change buffers:
---vim.keymap.set('n', 'H', ':bp<CR>', opts)
---vim.keymap.set('n', 'L', ':bn<CR>', opts)
+vim.keymap.set('n', 'H', ':bp<CR>', opts)
+vim.keymap.set('n', 'L', ':bn<CR>', opts)
 
 -- close buffer without closing window
 vim.keymap.set('n', '<leader>q', ':bp<CR>:bdelete #<CR>', opts)

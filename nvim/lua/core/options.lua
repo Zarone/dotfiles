@@ -38,3 +38,6 @@ vim.o.smoothscroll = true
 
 -- set nowrap
 vim.opt.wrap = false
+
+vim.o.timeout = true
+vim.o.timeoutlen = 300

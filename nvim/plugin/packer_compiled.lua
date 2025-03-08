@@ -89,11 +89,6 @@ _G.packer_plugins = {
     path = "/Users/zacharya/.local/share/nvim/site/pack/packer/start/cmp_luasnip",
     url = "https://github.com/saadparwaiz1/cmp_luasnip"
   },
-  harpoon = {
-    loaded = true,
-    path = "/Users/zacharya/.local/share/nvim/site/pack/packer/start/harpoon",
-    url = "https://github.com/ThePrimeagen/harpoon"
-  },
   ["markdown-preview.nvim"] = {
     loaded = false,
     needs_bufread = false,
@@ -115,11 +110,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/zacharya/.local/share/nvim/site/pack/packer/start/mason.nvim",
     url = "https://github.com/williamboman/mason.nvim"
-  },
-  ["mini.files"] = {
-    loaded = true,
-    path = "/Users/zacharya/.local/share/nvim/site/pack/packer/start/mini.files",
-    url = "https://github.com/echasnovski/mini.files"
   },
   ["mini.icons"] = {
     loaded = true,
@@ -180,6 +170,16 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/zacharya/.local/share/nvim/site/pack/packer/start/nvim-treesitter",
     url = "https://github.com/nvim-treesitter/nvim-treesitter"
+  },
+  ["nvim-web-devicons"] = {
+    loaded = true,
+    path = "/Users/zacharya/.local/share/nvim/site/pack/packer/start/nvim-web-devicons",
+    url = "https://github.com/nvim-tree/nvim-web-devicons"
+  },
+  ["oil.nvim"] = {
+    loaded = true,
+    path = "/Users/zacharya/.local/share/nvim/site/pack/packer/start/oil.nvim",
+    url = "https://github.com/stevearc/oil.nvim"
   },
   ["packer.nvim"] = {
     loaded = true,
