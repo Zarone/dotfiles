@@ -26,13 +26,26 @@ return packer.startup(function(use)
 
   -- Colorschemes (True color)
   use ('folke/tokyonight.nvim')
-  use('rose-pine/neovim')
+  use({'rose-pine/neovim', tag="v3.0.2"})
 
   -- File exploreer
   --use('preservim/nerdtree')
   use("stevearc/oil.nvim")
+  use {
+    'refractalize/oil-git-status.nvim',
 
-  -- Latex compiler
+    after = {
+      "oil.nvim",
+    },
+
+    config = function()
+      require('oil-git-status').setup({
+        show_ignored = false
+      })
+    end
+  }
+
+  --Latex compiler
   use('lervag/vimtex')
 
   -- Markdown previewer
@@ -54,7 +67,13 @@ return packer.startup(function(use)
   -- LSP Settings
   use {
     "williamboman/mason.nvim",
+    tag = "v1.11.0"
+  }
+  use {
     "williamboman/mason-lspconfig.nvim",
+    tag = "v1.32.0"
+  }
+  use {
     "neovim/nvim-lspconfig"
   }
 
@@ -83,6 +102,9 @@ return packer.startup(function(use)
 
   -- Adds TMUX compatability
   use 'christoomey/vim-tmux-navigator'
+
+  -- Git Integration
+  use 'lewis6991/gitsigns.nvim'
 
   if packer_bootstrap then
     require("packer").sync()
