@@ -9,6 +9,7 @@ export PATH="/Users/zacharya/.local/bin:$PATH"
 export PATH=$PATH:$ANDROID_HOME/emulator
 export PATH=$PATH:$ANDROID_HOME/platform-tools
 export PATH="/Library/TeX/texbin:$PATH"
+export PATH="/Applications/Postgres.app/Contents/Versions/17/bin:$PATH"
 
 export PATH="$PATH:/Applications/Docker.app/Contents/Resources/bin/"
 
