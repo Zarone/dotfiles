@@ -201,4 +201,10 @@ require("oil").setup({
   },
 })
 
-vim.keymap.set("n", "-", "<CMD>Oil<CR>", { desc = "Open parent directory" })
+-- Set up the - key for oil.nvim, but ensure it's not overridden in markdown files
+vim.keymap.set("n", "-", "<CMD>Oil<CR>", { 
+  desc = "Open parent directory",
+  noremap = true,
+  silent = true,
+  buffer = false  -- Make sure this is global
+})

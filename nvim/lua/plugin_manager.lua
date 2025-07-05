@@ -106,6 +106,9 @@ return packer.startup(function(use)
   -- Git Integration
   use 'lewis6991/gitsigns.nvim'
 
+  -- Wiki
+  use 'vimwiki/vimwiki'
+
   if packer_bootstrap then
     require("packer").sync()
   end
