@@ -5,7 +5,7 @@ function M.setup()
   -- Set vimwiki to use markdown syntax
   vim.g.vimwiki_list = {
     {
-      path = '~/vimwiki/',
+      path = '~/Dropbox/vimwiki',
       syntax = 'markdown',
       ext = '.md',
       links_space_char = '_',

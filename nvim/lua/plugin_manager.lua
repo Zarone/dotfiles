@@ -52,8 +52,8 @@ return packer.startup(function(use)
   use({
     "iamcco/markdown-preview.nvim",
     run = "cd app && npm install",
-    setup = function() vim.g.mkdp_filetypes = { "markdown" } end,
-    ft = { "markdown" },
+    setup = function() vim.g.mkdp_filetypes = { "markdown", "vimwiki" } end,
+    ft = { "markdown", "vimwiki" },
   })
 
   -- Visual changes
