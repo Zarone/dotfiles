@@ -3,6 +3,7 @@ ln -hs ~/dotfiles/nvim ~/.config/nvim
 ln -hs ~/dotfiles/tmux ~/.config/tmux
 ln -hs ~/dotfiles/zsh/.zshrc ~/.zshrc
 ln -hs ~/dotfiles/aerospace ~/.config/aerospace
+ln -hs ~/dotfiles/zathura ~/.config/zathura
 
 # Setup tmux
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
