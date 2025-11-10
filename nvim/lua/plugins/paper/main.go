@@ -33,9 +33,10 @@ type Paper struct {
 }
 
 type PageData struct {
-	Papers  []Paper
-	Read		int
-	Total		int
+	Papers  		[]Paper
+	Read				int
+	Total				int
+	PercentRead float32
 }
 
 type citationCacheEntry struct {
@@ -245,6 +246,10 @@ var tmpl = template.Must(template.New("index").Parse(`
 	<div style="padding:10px;">
 		<p>Total Read: {{.Read}}/{{.Total}}</p>
 	</div>
+	<div style="outline:2px solid black; width:100%; height:50px;">
+		<div style="height:100%; width: {{.PercentRead}}%; background-color:green;">
+		</div>
+	</div>
 </div>
 
 <h1>📚 Reading List</h1>
@@ -292,7 +297,12 @@ func (s *Server) handleIndex(w http.ResponseWriter, r *http.Request) {
 			}(title)
 		}
 	}
-	data := PageData{Papers: papers, Total: len(papers), Read: totalRead }
+	data := PageData{
+		Papers: papers, 
+		Total: len(papers), 
+		Read: totalRead, 
+		PercentRead: float32(totalRead) / float32(len(papers)) * 100.0,
+	}
 	if err := tmpl.Execute(w, data); err != nil {
 		log.Println("tmpl error:", err)
 	}

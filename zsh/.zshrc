@@ -9,9 +9,9 @@ export PATH="/Users/zacharya/.local/bin:$PATH"
 export PATH=$PATH:$ANDROID_HOME/emulator
 export PATH=$PATH:$ANDROID_HOME/platform-tools
 export PATH="/Library/TeX/texbin:$PATH"
-export PATH="/Applications/Postgres.app/Contents/Versions/17/bin:$PATH"
 
 export PATH="$PATH:/Applications/Docker.app/Contents/Resources/bin/"
+export PATH="/Library/PostgreSQL/17/scripts:$PATH"
 
 ## Binds option left-arrow and option right-arrow to jump words
 bindkey ";3C" forward-word

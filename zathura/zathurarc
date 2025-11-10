@@ -9,9 +9,9 @@ set pages-per-row 1
 
 #stop at page boundries
 set scroll-page-aware "true"
-set smooth-scroll "true"
+set smooth-scroll true
 set scroll-full-overlap 0.01
-set scroll-step 100
+set scroll-step 40
 
 #zoom settings
 set zoom-min 10
@@ -53,10 +53,12 @@ set notification-fg "#151515" #00
 #set recolor-keephue "true"
 
 set render-loading "false"
-set scroll-step 50
 
 unmap f
 map f toggle_fullscreen
 map [fullscreen] f toggle_fullscreen
 
 set selection-clipboard clipboard
+
+# Open in new window
+map <C-w> feedkeys ":exec zathura $FILE<Return>"

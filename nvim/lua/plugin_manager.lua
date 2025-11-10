@@ -30,20 +30,28 @@ return packer.startup(function(use)
 
   -- File exploreer
   --use('preservim/nerdtree')
-  use("stevearc/oil.nvim")
-  use {
-    'refractalize/oil-git-status.nvim',
 
-    after = {
-      "oil.nvim",
-    },
+  if vim.g.vscode then
+    print("Running Neovim in VSCode mode")
+  else
+    use("stevearc/oil.nvim")
+    use {
+      'refractalize/oil-git-status.nvim',
 
-    config = function()
-      require('oil-git-status').setup({
-        show_ignored = false
-      })
-    end
-  }
+      after = {
+        "oil.nvim",
+      },
+
+      config = function()
+        require('oil-git-status').setup({
+          show_ignored = false
+        })
+      end
+    }
+
+    -- Git Integration
+    use 'lewis6991/gitsigns.nvim'
+  end
 
   --Latex compiler
   use('lervag/vimtex')
@@ -102,9 +110,6 @@ return packer.startup(function(use)
 
   -- Adds TMUX compatability
   use 'christoomey/vim-tmux-navigator'
-
-  -- Git Integration
-  use 'lewis6991/gitsigns.nvim'
 
   -- Wiki
   use 'vimwiki/vimwiki'
