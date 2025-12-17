@@ -11,7 +11,11 @@ export PATH=$PATH:$ANDROID_HOME/platform-tools
 export PATH="/Library/TeX/texbin:$PATH"
 
 export PATH="$PATH:/Applications/Docker.app/Contents/Resources/bin/"
-export PATH="/Library/PostgreSQL/17/scripts:$PATH"
+
+# export PATH="/Library/PostgreSQL/17/scripts:$PATH"
+# export PATH="/Library/PostgreSQL/17/bin:$PATH"
+
+export PATH="/opt/homebrew/opt/postgresql@17/bin:$PATH"
 
 ## Binds option left-arrow and option right-arrow to jump words
 bindkey ";3C" forward-word

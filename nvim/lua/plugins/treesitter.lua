@@ -1,14 +1,18 @@
-require'nvim-treesitter.configs'.setup {
-  ensure_installed = { "lua", "python", 'javascript', 'typescript', 'c', 'markdown', 'markdown_inline' },
-  sync_install = false,
-  auto_install = true,
-
-  highlight = {
-    disable = { "latex" },
-    enable = true,
-    additional_vim_regex_highlighting = false,
-    indent = { enable = true }
-  },
-
-  indent = { enable = true }
+return {
+    'nvim-treesitter/nvim-treesitter',
+    build=':TSUpdate',
+    branch='master',
+    config = function()
+	local configs = require('nvim-treesitter.configs')
+	configs.setup({
+	    highlight = {
+		enable = true,
+	    },
+	    indent = { enable = true },
+	    ensure_installed = {
+		"lua"
+	    },
+	    auto_install = false
+	})
+    end
 }

@@ -33,13 +33,13 @@ end
 local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
 -- Python
-require("lspconfig").pylsp.setup{
+vim.lsp.config('pylsp', {
   on_attach = on_attach,
   capabilities = capabilities
-}
+})
 
 -- Lua
-require("lspconfig").lua_ls.setup{
+vim.lsp.config('lua_ls', {
   on_attach = on_attach,
   capabilities = capabilities,
   settings = {
@@ -55,63 +55,83 @@ require("lspconfig").lua_ls.setup{
       },
     },
   },
-}
+})
 
 -- Rust
-require("lspconfig").rust_analyzer.setup{
+vim.lsp.config('rust_analyzer', {
   on_attach = on_attach,
   capabilities = capabilities
-}
+})
 
 -- TypeScript
-require("lspconfig")["ts_ls"].setup {
+vim.lsp.config('ts_ls', {
   on_attach = on_attach,
   filetypes = { "javascript", "typescript", "typescriptreact", "typescript.tsx" },
   cmd = { "typescript-language-server", "--stdio" }
-}
+})
 
 -- CSS
-require("lspconfig").cssls.setup {
+vim.lsp.config('cssls', {
   on_attach = on_attach,
   capabilities = capabilities
-}
+})
 
 -- Tailwind
-require("lspconfig").tailwindcss.setup {
+vim.lsp.config('tailwindcss', {
   on_attach = on_attach,
   capabilities = capabilities
-}
+})
 
 -- GoLang
-require("lspconfig").gopls.setup{
+vim.lsp.config('gopls', {
   on_attach = on_attach,
   capabilities = capabilities
-}
+})
 
 -- Java
-require("lspconfig").jdtls.setup{
+vim.lsp.config('jdtls', {
   on_attach = on_attach,
   capabilities = capabilities
-}
+})
 
 -- C
-require("lspconfig").clangd.setup{
+vim.lsp.config('clangd', {
   on_attach = on_attach_setup_clang,
   capabilities = capabilities,
   cmd = { "clangd", "--compile-commands-dir=build" },
-}
+})
 
 -- ESLint
-require("lspconfig").eslint.setup{
+vim.lsp.config('eslint', {
   on_attach = on_attach,
   capabilities = capabilities
-}
+})
 
 -- Latex
-require("lspconfig").texlab.setup{
+vim.lsp.config('texlab', {
   on_attach = on_attach,
   capabilities = capabilities
-}
+})
+
+vim.lsp.config('ltex_plus', {
+  filetypes = { "tex", "latex", "bib", "markdown" },
+
+  settings = {
+    ltex = {
+      enabled = {"tex", "latex", "bib", "markdown"},
+      language = "en-US",
+      additionalRules = {
+        enablePickyRules = true,
+      },
+      latex = {
+        -- Let LTeX understand LaTeX commands
+        commandExtensions = "all",
+      },
+    },
+  },
+})
+
+vim.lsp.enable({'pylsp', 'lua_ls', 'rust_analyzer', 'ts_ls', 'cssls', 'tailwindcss', 'gopls', 'jdtls', 'clangd', 'eslint', 'texlab', 'ltex_plus'})
 
 -- Format Code
 vim.cmd('command! Format lua vim.lsp.buf.format()')

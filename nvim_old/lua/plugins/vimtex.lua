@@ -3,18 +3,10 @@ vim.g.vimtex_view_method = 'general'
 vim.g.tex_conceal='abdmg'
 vim.g.vimtex_complete_bib_simple=1
 vim.api.nvim_win_set_option(0, 'conceallevel', 2)
-vim.g.vimtex_view_general_viewer = 'zathura'
+vim.g.vimtex_view_general_viewer = 'open'
 
-vim.g.timtex_compiler_latexmk = {
-     options = {
-         '-lualatex',
-         '-pdf',
-         '-shell-escape',
-         '-verbose',
-         '-file-line-error',
-         '-synctex=1',
-         '-interaction=nonstopmode',
-     }
+vim.g.timtex_compiler_latexmk = { 
+  options = { '-lualatex', '-pdf', '-shell-escape', '-verbose', '-file-line-error', '-synctex=1', '-interaction=nonstopmode', } 
 }
 
 vim.g.vimtex_syntax_conceal = {
@@ -46,4 +38,6 @@ vim.g.vimtex_compiler_tectonic = {
 vim.g.vimtex_compiler_latexmk_engines = {
    _ = '-lualatex',
 }
+
+vim.g.vimtex_compiler_method = 'latexmk'
 
