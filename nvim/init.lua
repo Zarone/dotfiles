@@ -1,6 +1,5 @@
 require('config.options')
 require('config.keyboard')
 require('config.lazy')
-require('config.lsp')
 require('config.cal')
 require('config.paper')

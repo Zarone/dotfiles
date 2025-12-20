@@ -1,3 +1,4 @@
 return {
-  { 'preservim/nerdcommenter' }
+  { 'preservim/nerdcommenter' },
+  { 'christoomey/vim-tmux-navigator' }
 }
