@@ -63,7 +63,13 @@ return packer.startup(function(use)
     })
 
     -- Visual changes
-    use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
+    use {
+      'nvim-treesitter/nvim-treesitter',
+      branch='master',
+      {
+        run = ':TSUpdate'
+      }
+    }
     use 'echasnovski/mini.icons'
     use 'nvim-tree/nvim-web-devicons'
 

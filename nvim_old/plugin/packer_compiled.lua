@@ -94,11 +94,6 @@ _G.packer_plugins = {
     path = "/Users/zacharya/.local/share/nvim/site/pack/packer/start/gitsigns.nvim",
     url = "https://github.com/lewis6991/gitsigns.nvim"
   },
-  ["ltex-extra.nvim"] = {
-    loaded = true,
-    path = "/Users/zacharya/.local/share/nvim/site/pack/packer/start/ltex-extra.nvim",
-    url = "https://github.com/barreiroleo/ltex-extra.nvim"
-  },
   ["markdown-preview.nvim"] = {
     loaded = false,
     needs_bufread = false,
