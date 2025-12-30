@@ -7,7 +7,7 @@ vim.opt.shiftwidth = 2
 -- use space when tab inserted
 vim.opt.expandtab = true
 
-vim.opt.number = true
+vim.opt.number = false
 
 -- can delete any of these characters in insert mode
 vim.opt.backspace = 'indent,eol,start'
@@ -39,3 +39,6 @@ vim.opt.wrap = false
 
 vim.o.timeout = true
 vim.o.timeoutlen = 300
+
+vim.opt.undofile = true
+vim.opt.undodir = vim.fn.expand('~/.vim/undodir')

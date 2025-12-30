@@ -3,6 +3,7 @@ export ANDROID_HOME="~/Library/Android/sdk"
 export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk-21.jdk/Contents/Home"
 alias python="python3"
 
+export PATH="/usr/local/bin:$PATH"
 export PATH="/opt/homebrew/bin:$PATH"
 export PATH="/Applications/CMake.app/Contents/bin":"$PATH"
 export PATH="/Users/zacharya/.local/bin:$PATH"
@@ -44,7 +45,9 @@ zstyle ':vcs_info:git:*' actionformats ' 󰘬:%b|%a%u%c'
 # Git status settings
 zstyle ':vcs_info:git*+set-message:*' hooks git-untracked
 
-PS1='%B%F{red}[%F{yellow}%n%F{green}${vcs_info_msg_0_} %5F%1~%F{red}]›%f%b '
+#PS1='%B%F{red}[%F{yellow}%n%F{green}${vcs_info_msg_0_} %5F%1~%F{red}]›%f%b '
+
+PS1=$'%B%F{red}%F{yellow}%n%F{green}${vcs_info_msg_0_} %F{blue}%1~%F{red}%f%b\n%F{white}λ%f '
 
 ###
 ### 
